@@ -1,0 +1,121 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(109, 109, 109);
+    display: grid;
+    place-items: center;
+}
+
+.main {
+    min-height: 700px;
+    width: auto;
+    background-color: rgb(73, 120, 160);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 50px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.add {
+    display: flex;
+    width: fit-content;
+    padding-block: 20px;
+    & input {
+        padding: 20px 50px;
+        border: 1px solid black;
+        outline: none;
+        font-size: 22px;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+    }
+
+    & .add-btn{
+        font-size: 22px;
+        padding:10px 20px;
+        border-radius: 20px;
+        background-color: rgb(221, 147, 64);
+        cursor: pointer;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+}
+}
+
+.tasks{
+    width: 100%;
+}
+
+
+.soo{
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+    font-size: 22px;
+    text-transform: capitalize;
+    font-weight: 200;
+    position: relative;
+}
+
+.close-icon{
+    cursor: pointer;
+    background-color: rgb(132, 132, 132);
+    padding: 10px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.input-chek-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+.checked{
+    text-decoration-line: line-through;
+    -moz-text-decoration-line: line-through;
+    text-decoration-thickness: 2px;
+}
+
+
+.soo::before{
+    content: '';
+    position: absolute;
+    background-image: url('images/unchecked.png');
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+    left: -20px;
+    top: 3px;
+    z-index: 1;
+    cursor: pointer;
+    transform: translate(-50%,-0%);
+    -webkit-transform: translate(-50%,-0%);
+    -moz-transform: translate(-50%,-0%);
+    -ms-transform: translate(-50%,-0%);
+    -o-transform: translate(-50%,-0%);
+}
+
+li.checked::before{
+    background-image: url('images/checked.png');
+}
